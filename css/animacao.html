@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes movimento {
+            from{
+                left: 0px;
+                top: 0px;
+            }
+
+            to{
+                left: 800px;
+                top: 0px;
+            }
+        }
+
+        @keyframes rotacao {
+            0%{
+                 transform: rotateX();
+            }
+
+            100%{
+                 transform: rotateX(360deg);
+            }
+        }
+
+        @keyframes cores{
+            0%{
+                background: radial-gradient(white, blue);
+            }
+            25%{
+                background: radial-gradient(white, blue,white, blue);
+            }
+            
+            50%{
+                background: radial-gradient(white, blue,white, blue,white, blue);
+            }    
+            75%{
+                background: radial-gradient(white, blue,white, blue,white, blue,white, blue);
+            } 
+            100%{
+                background: radial-gradient(white, blue,white, blue,white, blue,white, blue,white, blue);
+            }
+        }
+        #animacao1{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: relative;
+            margin-bottom: 30px;
+            animation-name: movimento;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        #animacao2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation-name: rotacao;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        #animacao3{
+            width: 100px;
+            height: 100px;
+            margin-top: 30px;
+            background-color: brown;
+            animation-name: cores;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="animacao1">
+
+    </div>
+
+    <div id="animacao2">
+
+    </div>
+
+    <div id="animacao3">
+
+    </div>
+
+</body>
+</html>
